@@ -1,5 +1,5 @@
 import React from 'react';
-import Rotas from './Services/rotas'
+import Rotas from './Services/rotas.js'
 import { GlobalStyle } from './Global/style.js';
 export default function App() {
   return (

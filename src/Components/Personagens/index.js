@@ -1,26 +1,26 @@
-import React, {useState} from 'react';
+import React, {useState , useEfect} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 
 export default function Personagens(){
 
-  const [person, setPerson] = useState([])
-
-const API = 'http://hp-api.herokuapp.com/api/characters.'
- 
-function getPerson(){
-  axios.get(API).then((response)=>{
-    console.log(response.data.name)
-    setPerson(response.data.image)
+ const Api = 'http://hp-api.herokuapp.com/api/characters'
+ const [personagem, setPersonagem] = useState([])
+useEfect( ()=>{
+  axios.get(Api).then((response)=>{
+ setPersonagem(response.data)
   })
-}
+},[Api])
+
     return(
         <>
-        <h1>Personagens</h1>
+        <ul>{personagem.map( item => (
+          <>
+          <li>{item.name}</li>
+          <img src={item.image} alt={item.name}/>
+          </>
+        ))}</ul>
         <Link to="/Home"><button>HOME</button></Link>
-        <div>{getPerson}oi</div>
-        <div>{person}ola</div>
-        <img src={person} alt="personagens" />
         </>
     )
 }
