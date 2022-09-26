@@ -4,7 +4,7 @@ import axios from 'axios'
 
 export default function Personagens(){
 
- const Api = 'http://hp-api.herokuapp.com/api/characters'
+ const Api = 'https://hp-api.herokuapp.com/api/characters'
  const [personagem, setPersonagem] = useState([])
 useEfect( ()=>{
   axios.get(Api).then((response)=>{
