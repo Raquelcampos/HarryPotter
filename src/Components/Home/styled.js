@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import {Link} from 'react-router-dom'
 
 export const Box = styled.div`
 background-image:url(https://img.ibxk.com.br/2021/12/15/15113739961211.jpg);
@@ -13,6 +13,10 @@ background-position: center;
     opacity:50%;
 }
 `
+export const SLink = styled(Link)`
+text-decoration:none;
+color: white;
+`
 export const Ul =styled.ul`
 width:100vw;
 height:40px;
@@ -21,14 +25,7 @@ display:flex;
 align-items:center;
 justify-content:space-evenly;
 color:white;
-
 li:hover{
 cursor:pointer;
-
 }
 `
-// export const Img = styled.img`
-// width:20px;
-// height:20px;
-
-// `

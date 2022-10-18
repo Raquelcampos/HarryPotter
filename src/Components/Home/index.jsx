@@ -1,7 +1,5 @@
 import React from 'react';
 import * as S from './styled.js';
-import { Link } from 'react-router-dom';
-// import Hp from '../Componets/Img/Hp.png';
 
 export default function Home(){
 
@@ -9,11 +7,9 @@ export default function Home(){
     <S.Box>
    <nav>
      <S.Ul>
-       <img src="" alt="hp"/>
-       <Link to="/Personagens"><li>PERSONAGENS</li></Link>
+       <S.SLink to="/Personagens"><li>PERSONAGENS</li></S.SLink>
        <li>CASAS</li>
-       <li>SOBRE</li>
-       <Link to="/"><li>LOGIN</li></Link>
+       <S.SLink to="/"><li>LOGIN</li></S.SLink>
      </S.Ul>
    </nav>
     </S.Box>
